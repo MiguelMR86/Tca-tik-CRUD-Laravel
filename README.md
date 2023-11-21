@@ -15,7 +15,7 @@ Su uso es simple, click derecho y le das a la opción de MarkDown preview, o tam
 
 ## Comentarios
 Antes de comenzar, he tomado dos decisiones conforme he leido el enunciado, la mejor interpretación que le he dado, para la creación de la BBDD ha sido:
-* En caso de borrar un producto o almacen, se borrará automaticamente su registro en la tabla que que los unifica ( tabla: ProductStore ).
+* En caso de borrar un producto o almacen, se borrará automaticamente su registro en la tabla que que los unifica ( tabla: Product_has_X ).
 * En el caso de las categotias, al borrar una, no se borrará el producto; si no que el id de categoría se pondrá en null, en el producto.
 > Para el caso de las categorias, me parecio más correcto que no se borrará el producto.
 
