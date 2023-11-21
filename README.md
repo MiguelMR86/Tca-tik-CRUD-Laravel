@@ -1,8 +1,8 @@
 # CRUD Tca-Tik | Miguel Ángel Medina Ramírez
 
 ## Presentación
-¡Saludos empleador de Tca-Tik!
-A continuación, te presento el crud de productos para la prueba técnica que habéis solicitado, explicado paso por paso.
+¡Saludos al equipo de Tca-Tik!
+A continuación, te presento el crud propuesto para la prueba técnica que habéis solicitado, explicado paso por paso.
 
 ## Recomendaciones
 Para la lectura de este Markdown te recomiendo la siguiente extensión "Markdown Preview Enhanced", te facilitara mucha la lecutra.
