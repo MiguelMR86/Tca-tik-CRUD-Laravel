@@ -20,7 +20,7 @@ Antes de comenzar, he tomado dos decisiones conforme he leido el enunciado, la m
 > Para el caso de las categorias, me parecio más correcto que no se borrará el producto.
 
 ## Instalación
-Para empezar con la instlación, debemos clonar dicho proyecto, en la carpeta de largon\www.
+Para empezar con la instlación, debemos clonar el proyecto, en la carpeta de largon\www.
 
 ```shell
 cd C:\laragon\www
