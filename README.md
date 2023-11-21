@@ -1,66 +1,59 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# CRUD Tca-Tik | Miguel Ángel Medina Ramírez
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Presentación
+¡Saludos empleador de Tca-Tik!
+A continuación, te presento el crud de productos para la prueba técnica que habéis solicitado, explicado paso por paso.
 
-## About Laravel
+## Recomendaciones
+Para la lectura de este Markdown te recomiendo la siguiente extensión "Markdown Preview Enhanced", te facilitara mucha la lecutra.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![Alt text](CRUD-public/image-extension.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Su uso es simple, click derecho y le das a la opción de MarkDown preview, o también puedes usar su comando ( ctrl + mayus + k + v).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+![Alt text](CRUD-public/image-extension-run.png)
 
-## Learning Laravel
+## Comentarios
+Antes de comenzar, he tomado dos decisiones conforme he leido el enunciado, la mejor interpretación que le he dado, para la creación de la BBDD ha sido:
+* En caso de borrar un producto o almacen, se borrará automaticamente su registro en la tabla que que los unifica ( tabla: ProductStore ).
+* En el caso de las categotias, al borrar una, no se borrará el producto; si no que el id de categoría se pondrá en null, en el producto.
+> Para el caso de las categorias, me parecio más correcto que no se borrará el producto.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Instalación
+Para empezar con la instlación, debemos clonar dicho proyecto, en la carpeta de largon\www.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```shell
+cd C:\laragon\www
+git clone 'url del proyecto'
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Seguidamente, crearemos la base de datos en el terminal de HeidiSQL, pero primero, iniciamos los servicios de largon.
 
-## Laravel Sponsors
+![Alt text](CRUD-public/image-laragon.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Entramos en Database ( Al panel de administración de sesiones ), ponemos nuestros datos para iniciar sesión el servicio de mysql, para este caso no use contraseña para el usuario root.
 
-### Premium Partners
+![Alt text](CRUD-public/image-laragon-session.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Listo, ya estamos dentro del terminal de HeidiSQL, por último creamos la BBDD hacemos click derecho en nuestra sesión, y le daremos a crear nueva > base de datos, ( Le daremos nombre de "crud-tca-tik" para este ejemplo ).
 
-## Contributing
+![Alt text](CRUD-public/image-heidi-sql.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Una vez creada la BBDD, ejecutamos las migraciones.
 
-## Code of Conduct
+```shell
+php artisan migrate
+``` 
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Por último ejecutaremos los seeders.
 
-## Security Vulnerabilities
+```shell
+php artisan db:seed
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Uso
+Para correr el servidor, lo hacemos con el comando.
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```shell
+php artisan serve
+```
