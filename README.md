@@ -20,18 +20,22 @@ Antes de comenzar, he tomado dos decisiones conforme he leido el enunciado, la m
 > Para el caso de las categorias, me parecio más correcto que no se borrará el producto.
 
 ## Instalación
-Para empezar con la instlación, debemos clonar el proyecto, en la carpeta de largon\www.
+Para empezar con la instlación, debemos clonar el proyecto, en la carpeta de largon\www, entrar en ella y crear nuestro archivo .env
 
 ```shell
 cd C:\laragon\www
 git clone https://github.com/MiguelMR86/Tca-tik-CRUD-Laravel.git
 cd Tca-tik-CRUD-Laravel
+cp .env.example .env
 ```
 
-Ahora instamos las dependencias
+Ahora instamos las dependencias y generamos la clave de la aplicación:
+
 ```shell
 composer install
+php artisan key:generate
 ```
+
 
 Seguidamente, crearemos la base de datos en el terminal de HeidiSQL, pero primero, iniciamos los servicios de largon.
 
