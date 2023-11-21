@@ -24,7 +24,13 @@ Para empezar con la instlación, debemos clonar el proyecto, en la carpeta de la
 
 ```shell
 cd C:\laragon\www
-git clone 'url del proyecto'
+git clone https://github.com/MiguelMR86/Tca-tik-CRUD-Laravel.git
+cd Tca-tik-CRUD-Laravel
+```
+
+Ahora instamos las dependencias
+```shell
+composer install
 ```
 
 Seguidamente, crearemos la base de datos en el terminal de HeidiSQL, pero primero, iniciamos los servicios de largon.
