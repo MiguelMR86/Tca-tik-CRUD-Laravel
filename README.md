@@ -5,7 +5,7 @@
 A continuación, te presento el crud propuesto para la prueba técnica que habéis solicitado, explicado paso por paso.
 
 ## Recomendaciones
-Para la lectura de este Markdown te recomiendo la siguiente extensión "Markdown Preview Enhanced", te facilitara mucha la lecutra.
+Si vas a realizar la lectura de este Markdown desde Visual Studio Code, te recomiendo la siguiente extensión "Markdown Preview Enhanced", te facilitara mucha la lecutra.
 
 ![Alt text](CRUD-public/image-extension.png)
 
